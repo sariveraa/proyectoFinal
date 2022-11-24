@@ -1,11 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
+<body style="background-color:#FFD1E9;margin-top:0px;margin-left:0px;">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                
+                <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+            </a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SAMTA</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">REGISTRO SAMTA</h1>
+            </div>
+    </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -91,4 +113,5 @@
         </div>
     </div>
 </div>
+</body>
 @endsection

@@ -25,10 +25,11 @@
                         <a class="nav-link active" aria-current="page" href="#">PRINCIPAL</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">INICIAR SESIÓN</a>
+                        <a href="{{ url('/home') }}" class="nav-link active" aria-current="page" href="#">INICIAR SESIÓN</a>
+                        
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">REGISTRARSE</a>
+                        <a href="{{ route('register') }}" class="nav-link active" aria-current="page" href="#">REGISTRARSE</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">CATÁLOGO</a>

@@ -1,12 +1,47 @@
 @extends('layouts.app')
 
 @section('content')
+<body style="background-color:#FFD1E9;margin-top:0px;margin-left:0px;">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }} soy un admin</div>
-<h1>holaaaaaa</h1>
+                
+                <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+            </a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SAMTA</a>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center">SAMTA ADMINISTRADOR</h1>
+            </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="container text-center">
+        <div class="btn-group me-2" role="group" aria-label="First group">
+          <button type="button" class="btn btn-secondary">Administrar Usuarios</button>
+        </div>
+        <div class="btn-group me-2" role="group" aria-label="Second group">
+          <button type="button" class="btn btn-secondary">Administrar productos</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Third group">
+          <button type="button" class="btn btn-secondary">Registrar nuevo administrador</button>
+        </div>
+              <br>
+      <br>
+      <div class="copyright"> © 2022 Copyright by Salome Rivera y Laura Quintero. All Rights Reserved. </div>
+      <br>
+      </div>
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
@@ -14,10 +49,11 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>
     </div>
 </div>
+</body>
+
 @endsection

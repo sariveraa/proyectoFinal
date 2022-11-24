@@ -23,6 +23,7 @@
             <div class="col-12">
                 <h1 class="text-center">SAMTA ADMINISTRADOR</h1>
             </div>
+
     </div>
     <br>
     <br>
@@ -31,9 +32,15 @@
         <div class="btn-group me-2" role="group" aria-label="First group">
           <button type="button" class="btn btn-secondary">Administrar Usuarios</button>
         </div>
-        <div class="btn-group me-2" role="group" aria-label="Second group">
-          <button type="button" class="btn btn-secondary">Administrar productos</button>
-        </div>
+        <div class="container">
+                            <div class="justify-content-center">
+                                <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:100px;
+                                height:100px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="/productos">Administrar docentes</a>
+                            </div>
         <div class="btn-group" role="group" aria-label="Third group">
           <button type="button" class="btn btn-secondary">Registrar nuevo administrador</button>
         </div>

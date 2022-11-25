@@ -16,11 +16,15 @@
             {{ Form::text('precio', $producto->precio, ['class' => 'form-control' . ($errors->has('precio') ? ' is-invalid' : ''), 'placeholder' => 'Precio']) }}
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group">
-            {{ Form::label('imagen') }}
-            {{ Form::text('imagen', $producto->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
-            {!! $errors->first('imagen', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        <div class="form-group mt-4">
+        <label for="imagen">Imagen asociada al RED</label>
+        <input type="file" name="imagen" id="imagen" class="form-control @error('imagen') is-invalid @enderror" enctype="multipart/form-data" multiple>
+        @error('imagen')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+        @enderror
+    </div>
 
     </div>
     <div class="box-footer mt20">

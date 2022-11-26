@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}soy un usuario</div>
+                <div class="card-header">Bienvenido a SAMTA</div>
                 <h1></h1>
                 <div class="card-body">
                     @if (session('status'))
@@ -14,21 +14,18 @@
                     </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="container" style="margin-top: 10px">
-    <div class="row justify-content-center">
-        <div class="col-lg-12">
-            <hr>
-            <div class="row">
-                <div class="justify-content-center">
-                    <a href="/catagaloProd">ho</a>
                     
                 </div>
+                <div class="container">
+                            <div class="justify-content-center">
+                                <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:100px;
+                                height:100px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="/catagaloProd">Catalogo de productos</a>
+                            </div>
+                            <br>
             </div>
         </div>
     </div>

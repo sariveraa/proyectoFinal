@@ -22,6 +22,7 @@
                                         style="height: auto; width: 100px;display: block;" alt="Imágen del RED"
                                         class="card-img-top mx-auto" />
                                     <div class="card-body">
+                                    <p class="card-text"><strong>Codigo: </strong>{{ $prod->codigo }}</p>
                                         <p class="card-text"><strong>Descripción: </strong>{{ $prod->descripcion }}</p>
                                         <p class="card-text"><strong>precio:
                                             </strong>{{ $prod->precio }}</p>

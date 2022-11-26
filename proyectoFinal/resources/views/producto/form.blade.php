@@ -1,6 +1,10 @@
 <div class="box box-info padding-1">
     <div class="box-body">
-        
+    <div class="form-group">
+            {{ Form::label('codigo') }}
+            {{ Form::text('codigo', $producto->codigo, ['class' => 'form-control' . ($errors->has('codigo') ? ' is-invalid' : ''), 'placeholder' => 'codigo']) }}
+            {!! $errors->first('codigo', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
         <div class="form-group">
             {{ Form::label('nombre') }}
             {{ Form::text('nombre', $producto->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}

@@ -20,23 +20,21 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Producto extends Model
 {
-    
-    static $rules = [
-		'nombre' => 'required',
-		'descripcion' => 'required',
-		'precio' => 'required',
-		'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
-    ];
 
-    protected $perPage = 20;
+  static $rules = [
+    'codigo' => 'required',
+    'nombre' => 'required',
+    'descripcion' => 'required',
+    'precio' => 'required',
+    'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+  ];
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['nombre','descripcion','precio','imagen'];
+  protected $perPage = 20;
 
-
-
+  /**
+   * Attributes that should be mass-assignable.
+   *
+   * @var array
+   */
+  protected $fillable = ['codigo','nombre', 'descripcion', 'precio', 'imagen'];
 }

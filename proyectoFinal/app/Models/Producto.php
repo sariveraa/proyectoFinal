@@ -25,7 +25,7 @@ class Producto extends Model
 		'nombre' => 'required',
 		'descripcion' => 'required',
 		'precio' => 'required',
-		'imagen' => 'required',
+		'imagen' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
     ];
 
     protected $perPage = 20;

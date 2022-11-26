@@ -27,3 +27,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/users', UserController::class);
 
 Route::resource('productos', ProductoController::class);
+
+Route::get('/catagaloProd',[UserController::class,'catalogo']);
+

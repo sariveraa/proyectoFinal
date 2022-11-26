@@ -32,10 +32,8 @@
                             <strong>Precio:</strong>
                             {{ $producto->precio }}
                         </div>
-                        <div class="form-group">
-                            <strong>Imagen:</strong>
-                            {{ $producto->imagen }}
-                        </div>
+                        <img id="imagen" src="{{ asset('storage').'/'.$producto->imagen}}" width= "700"/>
+
 
                     </div>
                 </div>

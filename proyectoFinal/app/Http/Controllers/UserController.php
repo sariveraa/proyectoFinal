@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -21,9 +23,19 @@ class UserController extends Controller
      */
 
 
+
+    
+
     public function index()
     {
         return view('user.PrincipalUser');
+    }
+
+    public function catalogo()
+    {
+        $productos = Producto::all();
+
+        return view('user.cata', compact('productos'));
     }
 
     /**

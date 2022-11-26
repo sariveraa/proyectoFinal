@@ -27,9 +27,7 @@ class ProductoController extends Controller
 
 
 
-    public function vender($codigo){
-        return view('user.formCompra', compact('codigo'));
-    }
+    
 
 
 

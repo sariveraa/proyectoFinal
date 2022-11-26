@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,4 +31,8 @@ Route::resource('productos', ProductoController::class);
 
 Route::get('/catagaloProd',[UserController::class,'catalogo']);
 
-Route::get('/controlVentas/{codigo}',[ProductoController::class,'vender'])->name('Control.Ventas');
+
+Route::resource('ventas', VentaController::class);
+
+Route::post('ventascrear/{codigo}', [VentaController::class, 'create']);
+

@@ -19,6 +19,7 @@ class TodosSeeder extends Seeder
     {
         
 $useradmin=User::create([
+    'identidad' => '1001',
 	'name' => 'admin paul',
 	'email' => 'admin@gmail.com',
 	'password' => Hash::make('admin'),
@@ -27,6 +28,7 @@ $useradmin=User::create([
 
 
     $user1=User::create([
+        'identidad' => '1002',
         'name' => 'usuario Marcos',
         'email' => 'user@gmail.com',
         'password' => Hash::make('admin'),

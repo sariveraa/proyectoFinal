@@ -17,8 +17,11 @@ class CreateVentasTable extends Migration
             $table->id();
             $table->string('identidad');
             $table->foreign('identidad')->references('identidad')->on('users');
+            $table->string('nombre');
+            $table->string('direccion');
             $table->string('codigo');
             $table->foreign('codigo')->references('codigo')->on('productos');
+            $table->integer('total');
             $table->timestamps();
         });
     }

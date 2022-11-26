@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Models\Venta;
 use Illuminate\Http\Request;
 
 /**
@@ -23,6 +24,19 @@ class ProductoController extends Controller
         return view('producto.index', compact('productos'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
     }
+
+
+
+    public function vender($codigo){
+        return view('user.formCompra', compact('codigo'));
+    }
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.

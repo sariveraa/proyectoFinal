@@ -27,6 +27,11 @@
                                         <p class="card-text"><strong>precio:
                                             </strong>{{ $prod->precio }}</p>
                                     </div>
+                                    <div>
+                                    <a class="btn btn-sm btn-success"
+                                                    href=" {{ route('Control.Ventas', ['codigo' => $prod->codigo]) }}"><i
+                                                        class="fa fa-fw fa-edit"></i>comprar</a>
+                                    </div>
                                     
                                 </div>
                             </div>

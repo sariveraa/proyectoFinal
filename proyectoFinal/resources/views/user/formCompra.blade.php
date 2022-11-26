@@ -1,0 +1,3 @@
+formulario
+<br>
+{{$codigo}}

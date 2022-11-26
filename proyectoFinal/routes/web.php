@@ -30,3 +30,4 @@ Route::resource('productos', ProductoController::class);
 
 Route::get('/catagaloProd',[UserController::class,'catalogo']);
 
+Route::get('/controlVentas/{codigo}',[ProductoController::class,'vender'])->name('Control.Ventas');

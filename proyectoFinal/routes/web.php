@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,11 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/users', UserController::class);
 
 Route::resource('productos', ProductoController::class);
+
+Route::get('/catagaloProd',[UserController::class,'catalogo']);
+
+
+Route::resource('ventas', VentaController::class);
+
+Route::post('ventascrear/{codigo}', [VentaController::class, 'create']);
+

@@ -2,20 +2,7 @@
 
 @section('content')
 <body style="background-color:#FFD1E9;margin-top:0px;margin-left:0px;">
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                
-                <nav class="navbar navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-            </a>
-        </div>
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">SAMTA</a>
-        </div>
-    </nav>
+
     <br>
     <br>
     <div class="container">

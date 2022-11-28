@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Models\Venta;
 use Illuminate\Http\Request;
 
 /**
@@ -23,6 +24,17 @@ class ProductoController extends Controller
         return view('producto.index', compact('productos'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
     }
+
+
+
+    
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -47,6 +59,10 @@ class ProductoController extends Controller
 
         $producto = Producto::create($request->all());
 
+        if($request->hasFile('imagen')){
+            $producto['imagen'] = $request->file('imagen')->store('uploads','public');
+        }
+        $producto->save();
         return redirect()->route('productos.index')
             ->with('success', 'Producto created successfully.');
     }

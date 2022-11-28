@@ -28,21 +28,34 @@
     <br>
     <br>
     <br>
-    <div class="container text-center">
-        <div class="btn-group me-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary">Administrar Usuarios</button>
-        </div>
+    <div class="row gx-5">
+        <div class="col">
         <div class="container">
                             <div class="justify-content-center">
-                                <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
+                                <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
                                 width:100px;
                                 height:100px;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;" href="/productos">Administrar docentes</a>
+                                justify-content: center;" href="/productos">Administrar productos</a>
                             </div>
-        <div class="btn-group" role="group" aria-label="Third group">
-          <button type="button" class="btn btn-secondary">Registrar nuevo administrador</button>
+            </div>
+            </div>
+            <br>
+            <div class="col">
+            @if (Route::has('register'))
+            <div class="container">
+                            <div class="justify-content-center">
+                                <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:100px;
+                                height:100px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="{{ route('register') }}">Registrar nuevo administrador</a>
+                            </div>
+            </div>
+            @endif
+            </div>
         </div>
               <br>
       <br>

@@ -43,7 +43,7 @@ class AdminController extends Controller
         $email = $request->input('email');
         $tipo = $request->input('tipo');
         $password = $request->input('password');
-        $passwordconfirm = $request->input('password-confirm');
+        $passwordconfirm = $request->input('passwordconfirm');
 
         $user = new User();
         $user->identidad = $identidad;

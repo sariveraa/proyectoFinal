@@ -16,6 +16,11 @@ Usuario
                         <span id="card_title">
                             {{ __('Usuario') }}
                         </span>
+                        <div class="float-right">
+                            <a href="{{ route('administrar.create') }}" class="btn btn-primary btn-sm float-right" data-placement="left">
+                                {{ __('Create New') }}
+                            </a>
+                        </div>
 
                     </div>
                 </div>
@@ -50,7 +55,7 @@ Usuario
                                     <td>{{ $user->tipo }}</td>
 
                                     <td>
-                                    <a href="{{route('administrar.edit', $user->id)}}" class="btn btn-primary">Editar</a>
+                                        <a href="{{route('administrar.edit', $user->id)}}" class="btn btn-primary">Editar</a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -27,7 +27,7 @@ class AdminController extends Controller
      */
     public function create()
     {
-        //
+        return view('soloAdmin.create');
     }
 
     /**
@@ -38,7 +38,22 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $identidad = $request->input('identidad');
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $tipo = $request->input('tipo');
+        $password = $request->input('password');
+        $passwordconfirm = $request->input('password-confirm');
+
+        $user = new User();
+        $user->identidad = $identidad;
+        $user->name = $name;
+        $user->email = $email;
+        $user->tipo = $tipo;
+        $user->password = $password;
+        $user->passwordconfirm = $passwordconfirm;
+        $user->save();
+        return redirect()->route('administrar.index');
     }
 
     /**

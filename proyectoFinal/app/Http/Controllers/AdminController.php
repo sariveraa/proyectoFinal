@@ -2,41 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\User;
 
-class UserController extends Controller
+class AdminController extends Controller
 {
-
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('solouser',['only'=> ['index']]);
-    }
-    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-
-    
-
     public function index()
     {
-        return view('user.PrincipalUser');
-    }
+        $users = User::paginate();
 
-    public function catalogo()
-    {
-        $productos = Producto::all();
-
-        return view('user.cata', compact('productos'));
+        return view('soloAdmin.adminview', compact('users'))
+            ->with('i', (request()->input('page', 1) - 1) * $users->perPage());
     }
 
     /**
@@ -46,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('crear.create');
+        //
     }
 
     /**
@@ -57,23 +38,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $identidad = $request->input('identidad');
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $tipo = $request->input('tipo');
-        $password = $request->input('password');
-        $passwordconfirm = $request->input('password-confirm');
-
-        $user = new User();
-        $user->identidad = $identidad;
-        $user->name = $name;
-        $user->email = $email;
-        $user->tipo = $tipo;
-        $user->password = $password;
-        $user->passwordconfirm = $passwordconfirm;
-        $user->save();
-
-
+        //
     }
 
     /**
@@ -95,7 +60,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail($id);
+        return view('soloAdmin.edit', compact('user'));
     }
 
     /**
@@ -107,7 +73,12 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->tipo = $request->input('tipo');
+        $user->save();
+        return redirect()->route('administrar.index');
     }
 
     /**
@@ -118,6 +89,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

@@ -66,7 +66,7 @@
                                     <label for="tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo ') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="tipo" type="text" class="form-control @error('email') is-invalid @enderror" name="tipo" value="{{ old('email') }}" required autocomplete="email">
+                                        <input id="tipo" type="text" class="form-control @error('email') is-invalid @enderror" name="tipo" value="2" required autocomplete="email" hidden>
 
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,4 @@ Route::resource('ventas', VentaController::class);
 
 Route::post('ventascrear/{codigo}', [VentaController::class, 'create']);
 
+Route::resource('administrar', AdminController::class);

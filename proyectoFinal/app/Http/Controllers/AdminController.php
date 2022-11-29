@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Venta;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
@@ -118,8 +119,8 @@ class AdminController extends Controller
 
     public function datosApi()
     {
-        $usuarios = User::all();
-        return json_encode($usuarios);
+        $ventas = Venta::all();
+        return json_encode($ventas);
     }
 
 }

@@ -17,15 +17,22 @@
                     
                 </div>
                 <div class="container">
-                            <div class="justify-content-center">
-                                <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
-                                width:100px;
-                                height:100px;
+                                <div class="row gx-5">
+                                <div class="col">
+                                <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;" href="/catagaloProd">Catalogo de productos</a>
+                                </div>
+                                <div class="col">
+                                <img src="imacat.png" class="img-fluid" alt="Responsive image" width="400">
+                                </div>
                             </div>
                             <br>
+                            
+                            
             </div>
         </div>
     </div>

@@ -62,7 +62,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary">
                                     {{ __('Login') }}
                                 </button>
 
@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+    <a class="ml-4 text-sm btn btn-secondary" href="{{url('/')}}">Regresar a principal</a>
 </div>
 </body>
 @endsection

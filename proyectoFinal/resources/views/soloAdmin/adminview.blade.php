@@ -67,5 +67,7 @@ Usuario
             {!! $users->links() !!}
         </div>
     </div>
+    <br>
+    <a class="ml-4 text-sm btn btn-secondary" href="{{url('/home')}}">Regresar</a>
 </div>
 @endsection

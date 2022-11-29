@@ -8,15 +8,7 @@
             <div class="col-md-8">
                 <div class="card">
 
-                    <nav class="navbar navbar-dark bg-dark">
-                        <div class="container">
-                            <a class="navbar-brand" href="#">
-                            </a>
-                        </div>
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#">SAMTA</a>
-                        </div>
-                    </nav>
+                    
                     <br>
                     <br>
                     <div class="container">
@@ -50,10 +42,7 @@
                                 align-items: center;
                                 justify-content: center;" href="/administrar">Administrar docentes</a>
                                 </div>
-                                <br>
-                                <br>
-                                <div class="copyright"> © 2022 Copyright by Salome Rivera y Laura Quintero. All Rights Reserved. </div>
-                                <br>
+                                
                             </div>
                             <div class="card-body">
                                 @if (session('status'))

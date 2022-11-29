@@ -80,7 +80,7 @@
                                 height:50px;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;" href="{{ route('descargar_pdf')}}">Generar lista productos pdf</a>
+                                justify-content: center;" href="{{ route('descargar_pdf')}}">Generar reporte de productos</a>
                                 </div>
             </div>
         </div>

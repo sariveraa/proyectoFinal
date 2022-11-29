@@ -38,6 +38,9 @@ Route::get('ventascrear/{codigo}', [VentaController::class, 'prueba'])->name('ve
 
 Route::resource('administrar', AdminController::class);
 
+Route::get('download-pdf',[ProductoController::class,'generar_pdf'])->name('descargar_pdf');
+
 Route::get('/vistaApi',  [AdminController::class, 'creacionApi']);
 
+Route::get('download-pdf2',[UserController::class,'generar_pdf2'])->name('descargar_pdf2');
 

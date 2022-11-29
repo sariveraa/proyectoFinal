@@ -37,7 +37,7 @@ Usuario
                                 <tr>
                                     <th>No</th>
 
-                                    <th>identida</th>
+                                    <th>identidad</th>
                                     <th>nombre</th>
                                     <th>email</th>
                                     <th>tipo</th>
@@ -66,6 +66,16 @@ Usuario
             </div>
             {!! $users->links() !!}
         </div>
+        <br>
+        <div class="justify-content-center">
+                                    <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="{{ route('descargar_pdf2')}}">Generar lista productos pdf</a>
+                                </div>
+            </div>
     </div>
     <br>
     <a class="ml-4 text-sm btn btn-secondary" href="{{url('/home')}}">Regresar</a>

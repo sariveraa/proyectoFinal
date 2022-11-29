@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
+										<th>Código</th>
 										<th>Nombre</th>
 										<th>Descripcion</th>
 										<th>Precio</th>
-										<th>Imagen</th>
 
                                         <th></th>
                                     </tr>
@@ -67,10 +67,21 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            
                         </div>
+                        
                     </div>
                 </div>
                 {!! $productos->links() !!}
+            </div>
+            <div class="justify-content-center">
+                                    <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="{{ route('descargar_pdf')}}">Generar lista productos pdf</a>
+                                </div>
             </div>
         </div>
         <br>

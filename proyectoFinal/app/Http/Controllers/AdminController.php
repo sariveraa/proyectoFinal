@@ -109,4 +109,17 @@ class AdminController extends Controller
     public function destroy($id)
     {
     }
+
+
+    public function creacionApi()
+    {
+        return view('soloAdmin.api');
+    }
+
+    public function datosApi()
+    {
+        $usuarios = User::all();
+        return json_encode($usuarios);
+    }
+
 }

@@ -32,9 +32,12 @@ Route::resource('productos', ProductoController::class);
 
 Route::get('/catagaloProd',[UserController::class,'catalogo']);
 
-
 Route::resource('ventas', VentaController::class);
 
 Route::get('ventascrear/{codigo}', [VentaController::class, 'prueba'])->name('ventas.prueba');
 
 Route::resource('administrar', AdminController::class);
+
+Route::get('/vistaApi',  [AdminController::class, 'creacionApi']);
+
+

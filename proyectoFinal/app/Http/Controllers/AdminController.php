@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -43,17 +44,20 @@ class AdminController extends Controller
         $email = $request->input('email');
         $tipo = $request->input('tipo');
         $password = $request->input('password');
-        $passwordconfirm = $request->input('passwordconfirm');
-
-        $user = new User();
-        $user->identidad = $identidad;
-        $user->name = $name;
-        $user->email = $email;
-        $user->tipo = $tipo;
-        $user->password = $password;
-        $user->passwordconfirm = $passwordconfirm;
-        $user->save();
-        return redirect()->route('administrar.index');
+        $passwordconfirm = $request->input('passwordconfirmation');
+        if ($password == $passwordconfirm) {
+            $user = new User();
+            $user->identidad = $identidad;
+            $user->name = $name;
+            $user->email = $email;
+            $user->tipo = $tipo;
+            $user->password = Hash::make($password);
+            $user->save();
+            return redirect()->route('administrar.index');
+        }else{
+            echo "<script> alert('Error, las contraseñas no son iguales') </script>";
+            return view('soloAdmin.create');
+        }
     }
 
     /**
@@ -104,6 +108,5 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        
     }
 }

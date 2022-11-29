@@ -37,8 +37,7 @@ class VentaController extends Controller
      */
     public function create()
     {
-        $venta = new Venta();
-        return view('venta.create', compact('venta'));
+        return view('venta.create');
     }
 
     /**
@@ -49,10 +48,20 @@ class VentaController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Venta::$rules);
+        $identidad = $request->input('identidad');
+        $nombre = $request->input('nombre');
+        $direccion = $request->input('direccion');
+        $codigo = $request->input('codigo');
+        $total = $request->input('total');
 
-        $venta = Venta::create($request->all());
-
+        $venta = new Venta();
+        $venta->identidad = $identidad;
+        $venta->nombre = $nombre;
+        $venta->direccion = $direccion;
+        $venta->codigo = $codigo;
+        $venta->total = $total;
+        $venta->save();
+    
         return redirect()->route('ventas.index')
             ->with('success', 'Venta created successfully.');
     }
@@ -112,4 +121,10 @@ class VentaController extends Controller
         return redirect()->route('ventas.index')
             ->with('success', 'Venta deleted successfully');
     }
+
+    public function prueba($codigo)
+    {
+        return view('venta.create', compact('codigo'));
+    }
+
 }

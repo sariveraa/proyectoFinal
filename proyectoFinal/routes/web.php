@@ -35,6 +35,6 @@ Route::get('/catagaloProd',[UserController::class,'catalogo']);
 
 Route::resource('ventas', VentaController::class);
 
-Route::post('ventascrear/{codigo}', [VentaController::class, 'create']);
+Route::get('ventascrear/{codigo}', [VentaController::class, 'prueba'])->name('ventas.prueba');
 
 Route::resource('administrar', AdminController::class);

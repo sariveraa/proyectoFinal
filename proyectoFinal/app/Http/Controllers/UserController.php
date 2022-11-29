@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
 
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class UserController extends Controller
 {
 
@@ -119,5 +121,11 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function generar_pdf2(){
+        $users = User::all();
+        $pdf = PDF::loadView('soloAdmin.generar_pdf2', compact('users'));
+        return $pdf->download('users.pdf');
     }
 }

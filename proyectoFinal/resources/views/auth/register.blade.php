@@ -20,7 +20,7 @@
                                 @csrf
 
                                 <div class="form-group row">
-                                    <label for="identidad" class="col-md-4 col-form-label text-md-right">{{ __('identidad ') }}</label>
+                                    <label for="identidad" class="col-md-4 col-form-label text-md-right">{{ __('Numero de identificación ') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="identidad" type="text" class="form-control @error('email') is-invalid @enderror" name="identidad" value="{{ old('identidad') }}" required autocomplete="identidad">
@@ -32,9 +32,9 @@
                                         @enderror
                                     </div>
                                 </div>
-
+<br>
                                 <div class="row mb-3">
-                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Nombre') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -63,8 +63,7 @@
 
 
                                 <div class="form-group row">
-                                    <label for="tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo ') }}</label>
-
+                                    
                                     <div class="col-md-6">
                                         <input id="tipo" type="text" class="form-control @error('email') is-invalid @enderror" name="tipo" value="2" required autocomplete="email" hidden>
 

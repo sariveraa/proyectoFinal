@@ -6,6 +6,9 @@ use App\Models\Producto;
 use App\Models\Venta;
 use Illuminate\Http\Request;
 
+use Barryvdh\DomPDF\Facade\Pdf;
+
+
 /**
  * Class ProductoController
  * @package App\Http\Controllers
@@ -121,5 +124,11 @@ class ProductoController extends Controller
 
         return redirect()->route('productos.index')
             ->with('success', 'Producto deleted successfully');
+    }
+
+    public function generar_pdf(){
+        $productos = Producto::all();
+        $pdf = PDF::loadView('soloAdmin.generar_pdf', compact('productos'));
+        return $pdf->download('productos.pdf');
     }
 }

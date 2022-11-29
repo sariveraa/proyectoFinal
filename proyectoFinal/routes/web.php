@@ -38,3 +38,5 @@ Route::resource('ventas', VentaController::class);
 Route::get('ventascrear/{codigo}', [VentaController::class, 'prueba'])->name('ventas.prueba');
 
 Route::resource('administrar', AdminController::class);
+
+Route::get('download-pdf',[ProductoController::class,'generar_pdf'])->name('descargar_pdf');

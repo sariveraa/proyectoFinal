@@ -22,25 +22,28 @@
                         <br>
                         <br>
                         <div class="container text-center">
-                            <div class="btn-group me-2" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-secondary">Administrar Usuarios</button>
-                            </div>
                             <div class="container">
+                            <div class="row gx-5">
+                                <div class="col">
                                 <div class="justify-content-center">
-                                    <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
-                                width:100px;
-                                height:100px;
+                                    <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;" href="/productos">Administrar docentes</a>
+                                justify-content: center;" href="/productos">Administrar productos</a>
                                 </div>
+                                </div>
+                                <div class="col">
                                 <div class="justify-content-center">
-                                    <a class="btn btn-success" class="ml-4 " style="font-size:90%;                                color:white;
-                                width:100px;
-                                height:100px;
+                                    <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;" href="/administrar">Administrar docentes</a>
+                                justify-content: center;" href="/administrar">Administrar usuarios</a>
+                                </div>
+                                </div>
                                 </div>
                                 
                             </div>

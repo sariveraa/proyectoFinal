@@ -27,7 +27,7 @@
                                 </div>
                                 <div>
                                     <div class="float-right">
-                                        <a href="{{ route('ventas.prueba', ['codigo' => $prod->codigo]) }}" class="btn btn-primary btn-sm float-right" data-placement="left">
+                                        <a href="{{ route('ventas.prueba', ['codigo' => $prod->codigo]) }}" class="btn btn-secondary btn-sm float-right" data-placement="left">
                                             {{ __('Comprar') }}
                                         </a>
                                     </div>
@@ -44,7 +44,7 @@
             <div class="col-lg-12">
                 <hr>
                 <div class="col-auto p-5 text-center">
-                    <a class="ml-4 text-sm btn btn-primary" href="/users">Regresar</a>
+                    <a class="ml-4 text-sm btn btn-secondary" href="/users">Regresar</a>
                 </div>
             </div>
         </div>

@@ -73,7 +73,7 @@ Usuario
                                 height:50px;
                                 display: flex;
                                 align-items: center;
-                                justify-content: center;" href="{{ route('descargar_pdf2')}}">Generar lista productos pdf</a>
+                                justify-content: center;" href="{{ route('descargar_pdf2')}}">Generar reporte de usuarios</a>
                                 </div>
             </div>
     </div>

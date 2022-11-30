@@ -45,6 +45,17 @@
                                 </div>
                                 </div>
                                 </div>
+                                <br>
+                                <div class="col">
+                                <div class="justify-content-center">
+                                    <a class="btn btn-secondary" class="ml-4 " style="font-size:90%;                                color:white;
+                                width:200px;
+                                height:50px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;" href="/vistaApi">Ventas realizadas</a>
+                                </div>
+                                </div>
                                 
                             </div>
                             <div class="card-body">

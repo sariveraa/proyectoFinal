@@ -30,11 +30,11 @@ Route::resource('/users', UserController::class);
 
 Route::resource('productos', ProductoController::class);
 
-Route::get('/catagaloProd',[UserController::class,'catalogo']);
+Route::get('/catagaloProd',[UserController::class,'catalogo'])->name('catalogoProd');;
 
 Route::resource('ventas', VentaController::class);
 
-Route::get('ventascrear/{codigo}', [VentaController::class, 'prueba'])->name('ventas.prueba');
+Route::post('ventascrear', [VentaController::class, 'prueba'])->name('ventas.prueba');
 
 Route::resource('administrar', AdminController::class);
 

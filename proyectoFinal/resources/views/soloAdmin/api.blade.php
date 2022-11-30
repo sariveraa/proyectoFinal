@@ -9,34 +9,6 @@ Usuario
 
 
 
-<script>
-    var contenido = document.getElementById("contenido")
-
-    fetch('http://localhost:8000/api/datosApi')
-        .then(datos => datos.json())
-        .then(datos => {
-            console.log(datos)
-            tabla(datos)
-        })
-
-    function tabla(datos) {
-
-        for (let valor of datos) {
-            console.log(valor.nombre)
-            contenido.innerHTML += `
-            <tr>
-                <th scope="row">${valor.id}</th>
-                <td>${valor.identidad}</td>
-                <td>${valor.nombre}</td>
-                <td>${valor.direccion}</td>
-                <td>${valor.codigo}</td>
-              </tr>
-        `
-        }
-    }
-</script>
-
-
 
 <body>
 
@@ -59,7 +31,30 @@ Usuario
 
 
     <script>
-        
+        var contenido = document.getElementById("contenido")
+
+        fetch('http://localhost:8000/api/datosApi')
+            .then(datos => datos.json())
+            .then(datos => {
+                console.log(datos)
+                tabla(datos)
+            })
+
+        function tabla(datos) {
+
+            for (let valor of datos) {
+                console.log(valor.nombre)
+                contenido.innerHTML += `
+            <tr>
+                <th scope="row">${valor.id}</th>
+                <td>${valor.identidad}</td>
+                <td>${valor.nombre}</td>
+                <td>${valor.direccion}</td>
+                <td>${valor.codigo}</td>
+              </tr>
+        `
+            }
+        }
     </script>
 </body>
 

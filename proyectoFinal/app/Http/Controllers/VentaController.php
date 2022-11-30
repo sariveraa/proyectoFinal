@@ -62,8 +62,8 @@ class VentaController extends Controller
         $venta->total = $total;
         $venta->save();
     
-        return redirect()->route('ventas.index')
-            ->with('success', 'Venta created successfully.');
+        return redirect()->route('catalogoProd')
+            ->with('success', 'Compra finalizada con exito.');
     }
 
     /**
@@ -122,9 +122,11 @@ class VentaController extends Controller
             ->with('success', 'Venta deleted successfully');
     }
 
-    public function prueba($codigo)
+    public function prueba(Request $request)
     {
-        return view('venta.create', compact('codigo'));
+        $codigo = $request->codigo;
+        $total =$request->total;
+        return view('venta.create', compact('codigo','total'));
     }
 
 }

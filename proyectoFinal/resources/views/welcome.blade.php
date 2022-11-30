@@ -25,7 +25,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a href="nav-link active" class="nav-link active" aria-current="page" href="#">PRINCIPAL</a>
+                        <a href="/" class="nav-link active" aria-current="page" href="#">PRINCIPAL</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('/home') }}" class="nav-link active" aria-current="page" href="#">INICIAR SESIÓN</a>

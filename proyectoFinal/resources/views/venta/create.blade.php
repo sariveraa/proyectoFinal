@@ -23,7 +23,7 @@
                                 
 
                                 <div class="form-group row">
-                                    <label for="identidad" class="col-md-4 col-form-label text-md-right">{{ __('identidad ') }}</label>
+                                    <label for="identidad" class="col-md-4 col-form-label text-md-right">{{ __('Número de identificación') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="identidad" type="text" class="form-control @error('email') is-invalid @enderror" name="identidad" value="{{ old('identidad') }}" required autocomplete="identidad">
@@ -35,9 +35,9 @@
                                         @enderror
                                     </div>
                                 </div>
-
+<br>
                                 <div class="row mb-3">
-                                    <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('nombre') }}</label>
+                                    <label for="nombre" class="col-md-4 col-form-label text-md-right">{{ __('Nombre completo') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="direccion" class="col-md-4 col-form-label text-md-right">{{ __('direccion') }}</label>
+                                    <label for="direccion" class="col-md-4 col-form-label text-md-right">{{ __('Dirección') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="direccion" type="direccion" class="form-control @error('direccion') is-invalid @enderror" name="direccion" value="{{ old('direccion') }}" required autocomplete="direccion">
@@ -66,9 +66,10 @@
 
 
                                 <div class="form-group row">
-                                    <label for="codigo" class="col-md-4 col-form-label text-md-right">{{ __('codigo ') }}</label>
+                                    <label for="codigo" class="col-md-4 col-form-label text-md-right">{{ __('Código del producto') }}</label>
 
                                     <div class="col-md-6">
+                                        <input type="text"  class="form-control @error('email') is-invalid @enderror" value = {{$codigo}} disabled>
                                         <input id="codigo" type="text" class="form-control @error('email') is-invalid @enderror" name="codigo"  required autocomplete="email" value = {{$codigo}} hidden>
 
                                         @error('email')
@@ -82,10 +83,11 @@
                                 <br>
 
                                 <div class="row mb-3">
-                                    <label for="total" class="col-md-4 col-form-label text-md-right">{{ __('total') }}</label>
+                                    <label for="total" class="col-md-4 col-form-label text-md-right">{{ __('Total de la compra') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="total" type="total" class="form-control @error('total') is-invalid @enderror" name="total" required autocomplete="new-total">
+                                    <input type="text"  class="form-control @error('email') is-invalid @enderror" value = {{$total}} disabled>
+                                        <input id="total" type="number" class="form-control @error('total') is-invalid @enderror" name="total" value ={{$total}} required autocomplete="new-total" hidden >
 
                                         @error('total')
                                         <span class="invalid-feedback" role="alert">
